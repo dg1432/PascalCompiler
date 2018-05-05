@@ -1,0 +1,8 @@
+program test (input, output);
+  var a: integer;
+  begin
+    if input input <> output then
+      a := 0
+    else then
+      a := 1
+end..

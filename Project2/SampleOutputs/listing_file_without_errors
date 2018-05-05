@@ -1,0 +1,28 @@
+1		program test(input, output);
+2		
+3		procedure proc1(x: integer;
+4		y: real;
+5		z: array[1 .. 5] of integer);
+6		var i: integer;
+7		var j: real;
+8		var k: array[1 .. 5] of integer;
+9		
+10		begin
+11		z[3] := x * a - 1;
+12		call proc2(-3.14, x + 1)
+13		end;
+14		
+15		procedure proc2(a: real; b: integer);
+16		begin
+17		if not(a >= 2) then
+18		a := - a
+19		else
+20		if j = -15.3 then
+21		j := b
+22		else
+23		j := 1.23e2
+24		end;
+25		
+26		begin
+27		call proc1(50, 8.35, k)
+28		end.

@@ -1,0 +1,24 @@
+1		program test (input, output);
+2		var a : integer;
+3		var b : real;
+4		var c : array [1 .. 5] of integer;
+5		var d : real;
+6		var t : boolean;
+7		
+8		function fun1(x:integer; y:real;
+9		z:array [1 .. 2] of integer;
+10		q: real) : integer;
+11		begin
+12		x := z[1] * 2;
+13		y := (z[1] - z[2]) div 4;
+14		z[1] := x mod 2;
+15		q := y + 1.23e2;
+16		end;
+17		
+18		begin
+19		if b = 0 then b := a * 3.14
+20		b := c[4] / c[5];
+21		t := d >= a;
+22		a := a or c[1];
+23		a := c[1] and c[3];
+24		end.

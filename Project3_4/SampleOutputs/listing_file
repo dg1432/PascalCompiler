@@ -1,0 +1,63 @@
+1		program test (input, output);
+2		var a : integer;
+3		var b : real;
+4		var c : array [1..2] of integer;
+5		
+6		procedure proc1(x: integer; y: real;
+7		z: array [1..2] of integer; q: real);
+8		var d: integer;
+9		begin
+10		a := 2;
+11		z[a] := 4;
+12		c[3] := 3
+13		end;
+14		
+15		procedure proc2(x: integer; y: integer);
+16		var e: real;
+17		
+18		procedure proc3(n: integer; z: real);
+19		var e: integer;
+20		
+21		procedure proc4(a: integer; z: array [1..3] of real);
+22		var x: integer;
+23		begin
+24		e := a;
+25		a := e - x;
+26		call proc4(b, c)
+SEMERR: Type of parameter 1 for call to proc4 does not match declared type.
+SEMERR: Type of parameter 2 for call to proc4 does not match declared type.
+27		end;
+28		
+29		begin
+30		a := e;
+31		e := c[1.5]
+SEMERR: Attempted to use invalid number or variable as array index.
+32		end;
+33		
+34		begin
+35		call proc1(x, e, c, b);
+36		call proc3(c[1], e);
+37		e := e + 4.44;
+38		a:= (a mod y) div x;
+39		while ((a >= 4) and ((b <= e)
+40		or (not (a = c[a])))) do
+41		begin
+42		a:= c[a] + 1 + %
+LEXERR: Unrecognized symbol: %
+SYNERR: Expected id, num, not, (; Received %
+SEMERR: Addop operand types mismatched with each other.
+43		end
+44		end;
+45		
+46		begin
+47		call proc2(c[4] + 5, c[5]);
+48		call proc2(c[4], 2);
+49		call proc3(1, 1.2e45);
+SEMERR: proc3 was not declared or is outside the current scope.
+50		if (a < 2.1) then a:= 1.1 else a := a + 2.1;
+SEMERR: Relop operand types mismatched with each other.
+SEMERR: Conditional expression type is not boolean.
+SEMERR: Assignop operand types mismatched with each other.
+SEMERR: Addop operand types mismatched with each other.
+51		if (b > 4.2) then a := c[a]
+52		end.

@@ -1,0 +1,14 @@
+1		program test (input, output);
+2		var a: integer;
+3		begin
+4		if input input <> output then
+Syntax error: Expected [; Received input
+5		a := 0
+6		else then
+Syntax error: Expected id, call, begin, if, while; Received then
+7		a := 1
+Syntax error: Expected ;; Received a
+8		end..
+No more tokens available. Synch failed while looking for $
+Syntax error: Expected end; Received $
+Syntax error: Expected .; Received $ 
